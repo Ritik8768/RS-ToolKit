@@ -41,7 +41,8 @@ download_and_install() {
 download_and_install "lib/common.sh.enc" "$LIB_DIR/common.sh" 644
 
 # Install commands
-for cmd in rs-inspect rs-diagnose rs-fix-disk rs-inspect-cpu rs-inspect-mem rs-inspect-svc; do
+echo "  Installing commands..."
+for cmd in rs-inspect rs-diagnose rs-fix-disk rs-inspect-cpu rs-inspect-mem rs-inspect-svc rs-help; do
     download_and_install "bin/${cmd}.enc" "$INSTALL_DIR/$cmd" 755
     echo "  ✓ $cmd"
 done
