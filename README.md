@@ -4,16 +4,26 @@
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Installation
 
+### Method 1: Git Clone
 ```bash
-# Install
+git clone https://github.com/Ritik8768/RS-ToolKit.git
+cd RS-ToolKit
 sudo ./install.sh
+```
 
-# Use
-rs-inspect      # Check system health
-rs-diagnose     # Find issues
-rs-help         # Show all commands
+### Method 2: Direct Download
+```bash
+wget https://github.com/Ritik8768/RS-ToolKit/archive/refs/tags/v1.0.1.tar.gz
+tar -xzf v1.0.1.tar.gz
+cd RS-ToolKit-1.0.1
+sudo ./install.sh
+```
+
+### Verify Installation
+```bash
+rs-inspect
 ```
 
 ---
