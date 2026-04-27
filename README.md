@@ -363,7 +363,7 @@ We welcome contributions! Here's how:
 
 ## 📝 License
 
-MIT License - feel free to use in personal and commercial projects!
+License - feel free to use in personal and commercial projects!
 
 ---
 
@@ -386,7 +386,7 @@ MIT License - feel free to use in personal and commercial projects!
 
 ## 📞 Support
 
-- 📧 **Email:** ritikselukar@example.com
+- 📧 **Email:** ritikselukar222@gmail.com
 - 🐛 **Issues:** [GitHub Issues](https://github.com/Ritik8768/RS-ToolKit/issues)
 - 💬 **Discussions:** [GitHub Discussions](https://github.com/Ritik8768/RS-ToolKit/discussions)
 - 📖 **Documentation:** [Wiki](https://github.com/Ritik8768/RS-ToolKit/wiki)
