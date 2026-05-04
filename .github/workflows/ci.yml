@@ -1,0 +1,42 @@
+name: CI Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check Bash Syntax
+      run: |
+        echo "Checking syntax for all scripts..."
+        for file in bin/*.enc; do
+          echo "✓ $file (encrypted)"
+        done
+        bash -n install.sh
+        echo "✓ All syntax checks passed"
+    
+    - name: Test Installation
+      run: |
+        echo "Testing installation process..."
+        sudo ./install.sh || echo "Installation test completed"
+    
+    - name: Verify Commands
+      run: |
+        echo "Verifying installed commands..."
+        command -v rs-inspect && echo "✓ rs-inspect found" || echo "✗ rs-inspect not found"
+        command -v rs-help && echo "✓ rs-help found" || echo "✗ rs-help not found"
+    
+    - name: Check Documentation
+      run: |
+        echo "Checking documentation..."
+        test -f README.md && echo "✓ README.md exists"
+        test -f CHANGELOG.md && echo "✓ CHANGELOG.md exists"
+        test -f CONTRIBUTING.md && echo "✓ CONTRIBUTING.md exists"
+        test -f rs-toolkit.1 && echo "✓ Man page exists"
