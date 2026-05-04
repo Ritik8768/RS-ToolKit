@@ -91,6 +91,8 @@ man rs-toolkit
 - **Quick Help:** `rs-help`
 - **Man Page:** `man rs-toolkit`
 - **Changelog:** [CHANGELOG.md](CHANGELOG.md)
+- **Release Report:** [docs/reports/RELEASE-REPORT-v1.0.1.md](docs/reports/RELEASE-REPORT-v1.0.1.md)
+- **Contributing Guide:** [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 🎯 Use Cases
 
@@ -193,6 +195,10 @@ If you find this useful, please star the repository! ⭐
 
 ## 📸 Screenshots
 
+### Installation
+![Installation](screenshots/installation.png)
+
+### Dashboard Output
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                    RS-TOOLKIT - SERVER HEALTH DASHBOARD                    ║
@@ -206,6 +212,13 @@ If you find this useful, please star the repository! ⭐
   ✓ CPU: Normal (12%)
   ✓ Services: All running
 ```
+
+### Command Examples
+![Inspection Commands](screenshots/inspect-commands.png)
+![Diagnosis Commands](screenshots/diagnose-commands.png)
+![Fix Commands](screenshots/fix-commands.png)
+
+More screenshots available in the [screenshots/](screenshots/) directory.
 
 ## 🙏 Acknowledgments
 
