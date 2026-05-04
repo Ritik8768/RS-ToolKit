@@ -136,10 +136,6 @@ rs-watch 5
 ## 🧪 Testing
 
 Automated testing agent included:
-```bash
-sudo /home/ritik/rs-toolkit-test-agent.sh
-```
-
 - 137 comprehensive tests
 - 10 test suites
 - Automated bug detection
@@ -164,7 +160,7 @@ Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 🗺️ Roadmap
 
-See [GITHUB-ISSUES.md](GITHUB-ISSUES.md) for planned features:
+See ISSUES for planned features:
 - Configuration file support
 - JSON output format
 - Email notifications
@@ -185,7 +181,7 @@ See [GITHUB-ISSUES.md](GITHUB-ISSUES.md) for planned features:
 Found a bug? [Create an issue](https://github.com/Ritik8768/RS-ToolKit/issues/new)
 
 
-## 👨‍💻 Author
+## 👨💻 Author
 
 **Ritik Rajesh Selukar**
 - GitHub: [@Ritik8768](https://github.com/Ritik8768)
@@ -197,16 +193,11 @@ If you find this useful, please star the repository! ⭐
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
-![RS-Toolkit Dashboard](docs/images/screenshot.png)
-
-**Sample Output:**
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                    RS-TOOLKIT - SERVER HEALTH DASHBOARD                    ║
 ╠════════════════════════════════════════════════════════════════════════════╣
-║  Hostname: server1  |  Uptime: 15 days  |  2026-05-05 00:27:00           ║
+║  Hostname: server1  |  Uptime: 15 days  |  2026-05-05 00:27:00             ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 
 ✅ HEALTHY (3)
@@ -215,8 +206,6 @@ If you find this useful, please star the repository! ⭐
   ✓ CPU: Normal (12%)
   ✓ Services: All running
 ```
-
-**Sample Report:** [View full report](docs/sample-report.txt)
 
 ## 🙏 Acknowledgments
 
