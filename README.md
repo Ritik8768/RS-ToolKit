@@ -90,7 +90,6 @@ man rs-toolkit
 
 - **Quick Help:** `rs-help`
 - **Man Page:** `man rs-toolkit`
-- **Examples:** See [GITHUB-ISSUES.md](GITHUB-ISSUES.md)
 - **Changelog:** [CHANGELOG.md](CHANGELOG.md)
 
 ## 🎯 Use Cases
