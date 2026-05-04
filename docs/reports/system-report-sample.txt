@@ -1,0 +1,425 @@
+═══════════════════════════════════════════════════════════════════════════
+                    RS-TOOLKIT SYSTEM HEALTH REPORT
+═══════════════════════════════════════════════════════════════════════════
+
+Generated: Tue May  5 01:28:52 AM IST 2026
+Hostname: Ritik
+Uptime: up 2 hours, 32 minutes
+Kernel: 6.14.0-37-generic
+
+═══════════════════════════════════════════════════════════════════════════
+                         SYSTEM OVERVIEW
+═══════════════════════════════════════════════════════════════════════════
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    RS-TOOLKIT - SERVER HEALTH DASHBOARD                    ║
+╠════════════════════════════════════════════════════════════════════════════╣
+║  Hostname: Ritik  |  Uptime: 2 hours, 32 minutes  |  2026-05-05 01:28:52  ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+⚠️  WARNINGS (1)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ⚠ Disk usage high: 84%
+
+✅ HEALTHY (3)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✓ Memory: Normal (21%)
+  ✓ CPU: Normal (1.1%)
+  ✓ Services: All running
+
+📊 SYSTEM METRICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CPU Usage: 1.1%
+  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]
+  Load: 0.35, 0.27, 0.21
+
+Memory: 4.1Gi / 19Gi
+  [█████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 21%
+
+Disk (/): 85G / 107G
+  [████████████████████████████████████████████████████████████████████████████████████░░░░░░░░░░░░░░░░] 84%
+
+🔥 TOP PROCESSES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PID    CPU%   MEM%   COMMAND
+  34531  7.5%   1.3%   /opt/google/chrome/chrome
+  2734   3.9%   1.9%   /usr/bin/gnome-shell
+  4553   3.3%   0.3%   /usr/libexec/gnome-terminal-server
+  35554  2.4%   0.3%   /usr/bin/eog
+  32394  1.8%   1.1%   /opt/google/chrome/chrome
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║  ℹ Run rs-diagnose for detailed analysis  |  ℹ Run rs-fix for fixes       ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════════════════════
+                         DIAGNOSIS REPORT
+═══════════════════════════════════════════════════════════════════════════
+
+🔍 DIAGNOSIS REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Issue #1: HIGH DISK USAGE (WARNING)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Location: / (root partition)
+  Current: 84%
+  Threshold: 80%
+
+  Root Causes:
+    Analyzing disk usage...
+    • /var/log: 137M (old logs not rotated)
+    • /tmp: 452K (temporary files)
+    • /var/cache: 196M (package cache)
+
+  Impact Analysis:
+    🔴 Risk of disk full in ~8 days
+    🔴 May cause service failures
+    🔴 Database writes may fail
+
+  Recommended Fix:
+    Command: rs-fix-disk
+    Risk level: LOW (safe operation)
+    Execution time: ~2 minutes
+
+SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Total Issues: 1
+
+  Next Steps:
+    → Run: rs-fix-disk
+
+
+═══════════════════════════════════════════════════════════════════════════
+                         CPU DETAILS
+═══════════════════════════════════════════════════════════════════════════
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║  CPU DETAILED ANALYSIS                                                   ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📊 CPU INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CPU(s):                                  8
+  On-line CPU(s) list:                     0-7
+  Model name:                              Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+  BIOS Model name:                         Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz To Be Filled By O.E.M. CPU @ 1.0GHz
+  Thread(s) per core:                      2
+  Core(s) per socket:                      4
+  Socket(s):                               1
+  CPU(s) scaling MHz:                      30%
+  NUMA node0 CPU(s):                       0-7
+
+Load Average:
+   0.35, 0.27, 0.21
+
+⚡ CPU USAGE PER CORE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Core AM: 1.26%
+  Core AM: 2.04%
+  Core AM: 1.01%
+  Core AM: 1.01%
+  Core AM: 2%
+  Core AM: 1.02%
+  Core AM: 1.01%
+  Core AM: 0%
+  Core AM: 2%
+  Core : 100%
+  Core CPU: 100%
+  Core all: 1.26%
+  Core 0: 2.04%
+  Core 1: 1.01%
+  Core 2: 1.01%
+  Core 3: 2%
+  Core 4: 1.02%
+  Core 5: 1.01%
+  Core 6: 0%
+
+🔥 TOP CPU PROCESSES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PID    CPU%   USER       COMMAND
+  36346  100%   root       ps
+  34531  7.4%   ritik      /opt/google/chrome/chrome
+  2734   3.9%   ritik      /usr/bin/gnome-shell
+  4553   3.3%   ritik      /usr/libexec/gnome-terminal-server
+  35554  2.3%   ritik      /usr/bin/eog
+  32394  1.8%   ritik      /opt/google/chrome/chrome
+  22433  1.6%   ritik      /opt/google/chrome/chrome
+  4561   1.1%   ritik      bash
+  9264   1.0%   ritik      bash
+  22779  0.7%   ritik      /opt/google/chrome/chrome
+
+🔄 CONTEXT SWITCHES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Context switches/sec: 1459
+
+
+═══════════════════════════════════════════════════════════════════════════
+                         MEMORY DETAILS
+═══════════════════════════════════════════════════════════════════════════
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║  MEMORY DETAILED ANALYSIS                                                ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📊 MEMORY OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                 total        used        free      shared  buff/cache   available
+  Mem:      19Gi  4.1Gi   11Gi  590Mi  4.4Gi   15Gi
+  Swap:    8.0Gi     0B  8.0Gi                     
+
+💾 MEMORY BREAKDOWN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  MemTotal:            20283492 kB
+  MemFree:             12308396 kB
+  MemAvailable:        15983276 kB
+  Buffers:              450608 kB
+  Cached:              3828200 kB
+  SwapCached:                0 kB
+  SwapTotal:           8388604 kB
+  SwapFree:            8388604 kB
+
+🔥 TOP MEMORY PROCESSES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PID    MEM%   RSS      USER       COMMAND
+  22433  2.1%   429740K  ritik      /opt/google/chrome/chrome
+  2734   1.9%   392260K  ritik      /usr/bin/gnome-shell
+  10275  1.8%   365220K  ritik      /snap/code/235/usr/share/code/code
+  22779  1.6%   331860K  ritik      /opt/google/chrome/chrome
+  22685  1.3%   283316K  ritik      /opt/google/chrome/chrome
+  10874  1.3%   276440K  ritik      /proc/self/exe
+  34531  1.3%   273852K  ritik      /opt/google/chrome/chrome
+  22701  1.2%   257356K  ritik      /opt/google/chrome/chrome
+  25961  1.1%   231552K  ritik      /opt/google/chrome/chrome
+  32394  1.1%   231508K  ritik      /opt/google/chrome/chrome
+
+⚠️  MEMORY PRESSURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✓ No swap usage (healthy)
+
+
+═══════════════════════════════════════════════════════════════════════════
+                         DISK DETAILS
+═══════════════════════════════════════════════════════════════════════════
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║  DISK INSPECTION - DETAILED ANALYSIS                                     ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+💾 DISK USAGE BY PARTITION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Filesystem                    Size     Used    Avail   Use% Mounted
+/dev/nvme0n1p6                107G      85G      17G    84% /
+/dev/nvme0n1p1                256M      54M     203M    21% /boot/efi
+
+📊 INODE USAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Filesystem                      Inodes        IUsed        IFree  IUse%
+/dev/nvme0n1p6                 7143424      1027296      6116128    15%
+/dev/nvme0n1p1                       0            0            0      -
+
+⚡ DISK I/O STATISTICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1.77        r/s: 0.22    w/s: 0.00    util: 97.24
+loop0       r/s: 0.00    w/s: 0.00    util: 0.00
+loop1       r/s: 0.00    w/s: 0.00    util: 0.00
+loop10      r/s: 0.00    w/s: 0.00    util: 0.00
+loop11      r/s: 0.00    w/s: 0.00    util: 0.00
+loop12      r/s: 0.00    w/s: 0.00    util: 0.00
+loop13      r/s: 0.00    w/s: 0.00    util: 0.00
+loop14      r/s: 0.00    w/s: 0.00    util: 0.00
+loop15      r/s: 0.00    w/s: 0.00    util: 0.00
+loop16      r/s: 0.00    w/s: 0.00    util: 0.00
+loop17      r/s: 0.00    w/s: 0.00    util: 0.00
+loop18      r/s: 0.00    w/s: 0.00    util: 0.00
+loop19      r/s: 0.00    w/s: 0.00    util: 0.00
+loop2       r/s: 0.00    w/s: 0.00    util: 0.00
+loop20      r/s: 0.00    w/s: 0.00    util: 0.00
+loop21      r/s: 0.00    w/s: 0.00    util: 0.00
+loop22      r/s: 0.00    w/s: 0.00    util: 0.00
+loop23      r/s: 0.00    w/s: 0.00    util: 0.00
+loop24      r/s: 0.00    w/s: 0.00    util: 0.00
+loop25      r/s: 0.00    w/s: 0.00    util: 0.00
+loop26      r/s: 0.00    w/s: 0.00    util: 0.00
+loop27      r/s: 0.00    w/s: 0.00    util: 0.00
+loop28      r/s: 0.00    w/s: 0.00    util: 0.00
+loop29      r/s: 0.00    w/s: 0.00    util: 0.00
+loop3       r/s: 0.00    w/s: 0.00    util: 0.00
+loop30      r/s: 0.00    w/s: 0.00    util: 0.00
+loop31      r/s: 0.00    w/s: 0.00    util: 0.00
+loop4       r/s: 0.00    w/s: 0.00    util: 0.01
+loop5       r/s: 0.00    w/s: 0.00    util: 0.00
+loop6       r/s: 0.00    w/s: 0.00    util: 0.00
+loop7       r/s: 0.00    w/s: 0.00    util: 0.00
+loop8       r/s: 0.00    w/s: 0.00    util: 0.00
+loop9       r/s: 0.00    w/s: 0.00    util: 0.00
+nvme0n1     r/s: 13.08   w/s: 32.91   util: 1.27
+avg-cpu:    r/s: %system  w/s: %iowait  util: %idle
+0.25        r/s: 0.00    w/s: 0.00    util: 99.50
+loop0       r/s: 0.00    w/s: 0.00    util: 0.00
+loop1       r/s: 0.00    w/s: 0.00    util: 0.00
+loop10      r/s: 0.00    w/s: 0.00    util: 0.00
+loop11      r/s: 0.00    w/s: 0.00    util: 0.00
+loop12      r/s: 0.00    w/s: 0.00    util: 0.00
+loop13      r/s: 0.00    w/s: 0.00    util: 0.00
+loop14      r/s: 0.00    w/s: 0.00    util: 0.00
+loop15      r/s: 0.00    w/s: 0.00    util: 0.00
+loop16      r/s: 0.00    w/s: 0.00    util: 0.00
+loop17      r/s: 0.00    w/s: 0.00    util: 0.00
+loop18      r/s: 0.00    w/s: 0.00    util: 0.00
+loop19      r/s: 0.00    w/s: 0.00    util: 0.00
+loop2       r/s: 0.00    w/s: 0.00    util: 0.00
+loop20      r/s: 0.00    w/s: 0.00    util: 0.00
+loop21      r/s: 0.00    w/s: 0.00    util: 0.00
+loop22      r/s: 0.00    w/s: 0.00    util: 0.00
+loop23      r/s: 0.00    w/s: 0.00    util: 0.00
+loop24      r/s: 0.00    w/s: 0.00    util: 0.00
+loop25      r/s: 0.00    w/s: 0.00    util: 0.00
+loop26      r/s: 0.00    w/s: 0.00    util: 0.00
+loop27      r/s: 0.00    w/s: 0.00    util: 0.00
+loop28      r/s: 0.00    w/s: 0.00    util: 0.00
+loop29      r/s: 0.00    w/s: 0.00    util: 0.00
+loop3       r/s: 0.00    w/s: 0.00    util: 0.00
+loop30      r/s: 0.00    w/s: 0.00    util: 0.00
+loop31      r/s: 0.00    w/s: 0.00    util: 0.00
+loop4       r/s: 0.00    w/s: 0.00    util: 0.00
+loop5       r/s: 0.00    w/s: 0.00    util: 0.00
+loop6       r/s: 0.00    w/s: 0.00    util: 0.00
+loop7       r/s: 0.00    w/s: 0.00    util: 0.00
+loop8       r/s: 0.00    w/s: 0.00    util: 0.00
+loop9       r/s: 0.00    w/s: 0.00    util: 0.00
+nvme0n1     r/s: 0.00    w/s: 0.00    util: 0.00
+
+📁 TOP 10 SPACE CONSUMERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SIZE      PATH
+  38G       /home/ritik
+  38G       /home
+  25G       /var/lib
+  25G       /var
+  13G       /usr
+  11G       /home/ritik/nemo-env/lib/python3.12/site-packages
+  11G       /home/ritik/nemo-env/lib/python3.12
+  11G       /home/ritik/nemo-env/lib
+  11G       /home/ritik/nemo-env
+  11G       /home/ritik/.cache
+
+📄 LARGE FILES (>100MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SIZE      PATH
+  2.7G      /home/ritik/.config/google-chrome/OptGuideOnDeviceModel/2025.8.21.1028/weights.bin
+  1.9G      /home/ritik/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff
+  1.4G      /home/ritik/.config/google-chrome/OptGuideOnDeviceModel/2025.8.21.1028/cache.bin
+  1.2G      /var/lib/snapd/snaps/libreoffice_369.snap
+  1.2G      /var/lib/snapd/snaps/libreoffice_366.snap
+  1.2G      /var/lib/snapd/cache/5afbdaa1d955e698fbd9d2b78b39dc8d2e0bf18b4305bd9484af438db8b14e6e5311605aff64bb9502e3257949f619e0
+  1.2G      /var/lib/snapd/cache/0209a52d3c050fc1531275d1a7fefc8514e216c7ffb75877343807bc6063335495e3a236760642cdcae03a4bd899ecee
+  998M      /home/ritik/Downloads/LM-Studio-0.4.0-18-x64.AppImage
+  996M      /home/ritik/nemo-env/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so
+  874M      /home/ritik/.cache/pip/http-v2/f/4/8/1/4/f481472b84d31040a58f8c59712d5ad1caa0fd577fc660f3d283ebb7.body
+
+⚠️  WARNING: Disk usage at 84%
+  → Recommended action: rs-diagnose-disk (analyze space usage)
+
+
+═══════════════════════════════════════════════════════════════════════════
+                         NETWORK DETAILS
+═══════════════════════════════════════════════════════════════════════════
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║  NETWORK INSPECTION - DETAILED ANALYSIS                                  ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+🌐 NETWORK INTERFACES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  lo               RX: TX:           TX: 2:          
+  lo               RX: TX:           TX: 3:          
+  lo               RX: TX:           TX: TX:         
+
+📊 CONNECTION SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total: 1193
+TCP:   13 (estab 5, closed 0, orphaned 0, timewait 0)
+
+Transport Total     IP        IPv6
+RAW	  2         1         1        
+UDP	  11        5         6        
+TCP	  13        6         7        
+INET	  26        12        14       
+FRAG	  0         0         0        
+
+
+🔌 LISTENING PORTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PROTO  LOCAL ADDRESS           PROCESS
+  udp    0.0.0.0:5353            ,pid=1115,fd=12))
+  udp    0.0.0.0:59244           ,pid=1115,fd=14))
+  udp    127.0.0.54:53           ,pid=808,fd=16))
+  udp    127.0.0.53%lo:53        ,pid=808,fd=14))
+  udp    [::]:5353               ,pid=1115,fd=13))
+  udp    [::]:45910              ,pid=1115,fd=15))
+  tcp    127.0.0.54:53           ,pid=808,fd=17))
+  tcp    127.0.0.1:11434         ,pid=1504,fd=3))
+  tcp    127.0.0.1:631           ,pid=1403,fd=7))
+  tcp    0.0.0.0:80              ,pid=1512,fd=5))
+  tcp    127.0.0.53%lo:53        ,pid=808,fd=15))
+  tcp    127.0.0.1:40802         ,pid=10874,fd=57))
+  tcp    [::]:80                 ,pid=1512,fd=6))
+  tcp    [::1]:631               ,pid=1403,fd=6))
+
+📈 TCP CONNECTION STATES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  LISTEN               8
+  ESTAB                5
+
+🌍 TOP CONNECTED IPs
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  COUNT  IP ADDRESS
+  2      [64
+  1      [2a04
+  1      [2606
+  1      [2404
+
+📡 NETWORK TRAFFIC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Average:        IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s   %ifutil
+Average:           lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+Average:         wlo1      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+Average:      docker0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+🔍 CONNECTIVITY TEST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✓ Internet connectivity: OK
+  ✓ DNS resolution: OK
+
+
+═══════════════════════════════════════════════════════════════════════════
+                         SERVICE STATUS
+═══════════════════════════════════════════════════════════════════════════
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║  SERVICES DETAILED ANALYSIS                                              ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ FAILED SERVICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✓ No failed services
+
+✅ RUNNING SERVICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Total running: 37
+
+🔑 KEY SERVICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✓ cron
+  ✓ docker
+  ✓ nginx
+
+🔄 SERVICE RESTARTS (Last 24h)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Total service events: 281
+
+
+═══════════════════════════════════════════════════════════════════════════
+                         END OF REPORT
+═══════════════════════════════════════════════════════════════════════════
