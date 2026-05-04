@@ -1,7 +1,6 @@
 # RS-Toolkit
 
 [![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/Ritik8768/RS-ToolKit/releases)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Bash](https://img.shields.io/badge/bash-5.0+-orange.svg)](https://www.gnu.org/software/bash/)
 [![Quality](https://img.shields.io/badge/quality-99%25-brightgreen.svg)](https://github.com/Ritik8768/RS-ToolKit)
 
@@ -186,13 +185,10 @@ See [GITHUB-ISSUES.md](GITHUB-ISSUES.md) for planned features:
 
 Found a bug? [Create an issue](https://github.com/Ritik8768/RS-ToolKit/issues/new)
 
-## 📜 License
-
-MIT License - See [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Ritik**
+**Ritik Rajesh Selukar**
 - GitHub: [@Ritik8768](https://github.com/Ritik8768)
 - Repository: [RS-ToolKit](https://github.com/Ritik8768/RS-ToolKit)
 
