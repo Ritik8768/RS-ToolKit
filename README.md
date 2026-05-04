@@ -195,28 +195,14 @@ If you find this useful, please star the repository! ⭐
 
 ## 📸 Screenshots
 
-### Installation
-![Installation](screenshots/installation.png)
+### System Health Dashboard
+![RS-Toolkit Dashboard](screenshots/rs-inspect-dashboard.png)
 
-### Dashboard Output
-```
-╔════════════════════════════════════════════════════════════════════════════╗
-║                    RS-TOOLKIT - SERVER HEALTH DASHBOARD                    ║
-╠════════════════════════════════════════════════════════════════════════════╣
-║  Hostname: server1  |  Uptime: 15 days  |  2026-05-05 00:27:00             ║
-╚════════════════════════════════════════════════════════════════════════════╝
-
-✅ HEALTHY (3)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  ✓ Memory: Normal (45%)
-  ✓ CPU: Normal (12%)
-  ✓ Services: All running
-```
-
-### Command Examples
-![Inspection Commands](screenshots/inspect-commands.png)
-![Diagnosis Commands](screenshots/diagnose-commands.png)
-![Fix Commands](screenshots/fix-commands.png)
+The colorful, easy-to-read dashboard shows:
+- ✅ System health status at a glance
+- 📊 CPU, Memory, and Disk usage with visual bars
+- 🔥 Top resource-consuming processes
+- ⚠️ Warnings and issues that need attention
 
 More screenshots available in the [screenshots/](screenshots/) directory.
 
