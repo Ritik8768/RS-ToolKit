@@ -1,0 +1,322 @@
+.TH RS-TOOLKIT 1 "May 2026" "RS-Toolkit 1.0.1" "User Commands"
+.SH NAME
+rs-toolkit \- Professional Linux System Administration Toolkit
+.SH SYNOPSIS
+.B rs-inspect
+[\fIOPTIONS\fR]
+.br
+.B rs-diagnose
+[\fIOPTIONS\fR]
+.br
+.B rs-fix-*
+[\fIOPTIONS\fR]
+.SH DESCRIPTION
+.B RS-Toolkit
+is a comprehensive suite of system administration tools designed to inspect, diagnose, and fix common Linux server issues. Perfect for beginners and professionals alike.
+
+.SH COMMANDS
+
+.SS Inspection Commands (Read-Only)
+These commands are safe to run anytime. They only read system information.
+
+.TP
+.B rs-inspect
+Master health dashboard showing overall system status
+.br
+\fIExample:\fR rs-inspect
+
+.TP
+.B rs-inspect-cpu
+View CPU usage, load average, and top processes
+.br
+\fIExample:\fR rs-inspect-cpu
+
+.TP
+.B rs-inspect-mem
+Check memory usage, swap, and top memory consumers
+.br
+\fIExample:\fR rs-inspect-mem
+
+.TP
+.B rs-inspect-disk
+Analyze disk usage, I/O stats, and space usage
+.br
+\fIExample:\fR rs-inspect-disk
+
+.TP
+.B rs-inspect-network
+View network connections, bandwidth, and connectivity
+.br
+\fIExample:\fR rs-inspect-network
+
+.TP
+.B rs-inspect-svc
+Check service status and identify failed services
+.br
+\fIExample:\fR rs-inspect-svc
+
+.TP
+.B rs-inspect-security
+Security audit including failed logins and firewall status
+.br
+\fIExample:\fR rs-inspect-security
+
+.TP
+.B rs-inspect-logs
+Analyze system logs for errors and warnings
+.br
+\fIExample:\fR rs-inspect-logs
+
+.SS Diagnosis Commands (Analysis)
+These commands analyze your system and provide recommendations.
+
+.TP
+.B rs-diagnose
+Auto-detect all issues with detailed recommendations
+.br
+\fIExample:\fR rs-diagnose
+
+.TP
+.B rs-diagnose-slow
+Identify performance bottlenecks (CPU, memory, I/O)
+.br
+\fIExample:\fR rs-diagnose-slow
+
+.TP
+.B rs-diagnose-memory
+Memory leak detection and analysis
+.br
+\fIExample:\fR rs-diagnose-memory
+
+.TP
+.B rs-diagnose-disk
+Disk space analysis with cleanup recommendations
+.br
+\fIExample:\fR rs-diagnose-disk
+
+.TP
+.B rs-diagnose-network
+Network problem diagnosis and troubleshooting
+.br
+\fIExample:\fR rs-diagnose-network
+
+.SS Fix Commands (Requires Root)
+These commands make changes to your system. Always review before running.
+
+.TP
+.B rs-fix-disk
+Clean disk space by removing old logs, temp files, and cache
+.br
+\fIExample:\fR sudo rs-fix-disk
+.br
+\fIDry run:\fR sudo rs-fix-disk --dry-run
+
+.TP
+.B rs-fix-memory
+Clear system cache and free up memory
+.br
+\fIExample:\fR sudo rs-fix-memory
+
+.TP
+.B rs-fix-services
+Restart failed systemd services
+.br
+\fIExample:\fR sudo rs-fix-services
+
+.TP
+.B rs-fix-logs
+Rotate and compress old log files
+.br
+\fIExample:\fR sudo rs-fix-logs
+
+.SS Utility Commands
+
+.TP
+.B rs-watch
+Continuous monitoring with auto-refresh
+.br
+\fIExample:\fR rs-watch 5
+.br
+(Refreshes every 5 seconds)
+
+.TP
+.B rs-report
+Generate comprehensive system report
+.br
+\fIExample:\fR rs-report > system-report.txt
+
+.TP
+.B rs-help
+Show detailed help and usage guide
+.br
+\fIExample:\fR rs-help
+
+.SH OPTIONS
+.TP
+.B \-h, \-\-help
+Display help information for the command
+
+.TP
+.B \-\-dry-run
+Preview changes without making them (fix commands only)
+
+.SH EXAMPLES
+
+.SS Beginner Examples
+
+.TP
+\fBCheck if your server is healthy:\fR
+.br
+rs-inspect
+
+.TP
+\fBFind out why server is slow:\fR
+.br
+rs-diagnose-slow
+
+.TP
+\fBClean up disk space (preview first):\fR
+.br
+sudo rs-fix-disk --dry-run
+.br
+sudo rs-fix-disk
+
+.TP
+\fBMonitor system in real-time:\fR
+.br
+rs-watch 5
+
+.SS Advanced Examples
+
+.TP
+\fBComplete system checkup:\fR
+.br
+rs-inspect && rs-diagnose
+
+.TP
+\fBGenerate report for support:\fR
+.br
+rs-report > /tmp/system-report-$(date +%Y%m%d).txt
+
+.TP
+\fBFix all common issues:\fR
+.br
+sudo rs-fix-disk && sudo rs-fix-memory && sudo rs-fix-services
+
+.SH FILES
+.TP
+.I /usr/local/bin/rs-*
+Command executables
+
+.TP
+.I /usr/local/lib/rs-toolkit/common.sh
+Shared library functions
+
+.TP
+.I /etc/rs-toolkit/config.conf
+Configuration file
+
+.TP
+.I /var/log/rs-toolkit/audit.log
+Audit log of all actions
+
+.SH ENVIRONMENT
+No special environment variables required.
+
+.SH EXIT STATUS
+.TP
+.B 0
+Success
+
+.TP
+.B 1
+Error occurred
+
+.TP
+.B 2
+Warning (non-critical)
+
+.SH SECURITY
+.TP
+\fBInspection commands\fR can be run by any user
+.br
+\fBFix commands\fR require root privileges (sudo)
+.br
+All actions are logged to audit.log
+
+.SH TIPS FOR BEGINNERS
+
+.TP
+\fB1. Start with inspection\fR
+Always run inspection commands first to understand your system:
+.br
+rs-inspect
+
+.TP
+\fB2. Use diagnosis before fixing\fR
+Diagnose issues before attempting fixes:
+.br
+rs-diagnose
+
+.TP
+\fB3. Preview changes\fR
+Use --dry-run to see what will be changed:
+.br
+sudo rs-fix-disk --dry-run
+
+.TP
+\fB4. Read the output\fR
+Commands use colors and symbols:
+.br
+✓ Green = Good
+.br
+⚠ Yellow = Warning
+.br
+✗ Red = Problem
+
+.TP
+\fB5. Get help anytime\fR
+Use rs-help or --help flag:
+.br
+rs-help
+.br
+rs-inspect --help
+
+.SH TROUBLESHOOTING
+
+.TP
+\fBCommand not found\fR
+Run: sudo bash install.sh
+
+.TP
+\fBPermission denied\fR
+Use sudo for fix commands:
+.br
+sudo rs-fix-disk
+
+.TP
+\fBColors not showing\fR
+Your terminal may not support colors. Output still works.
+
+.SH AUTHOR
+Written by RS-Toolkit Development Team
+
+.SH REPORTING BUGS
+Report bugs to: https://github.com/your-repo/rs-toolkit/issues
+
+.SH COPYRIGHT
+Copyright © 2026 RS-Toolkit Project
+.br
+License: MIT
+
+.SH SEE ALSO
+.BR systemctl (1),
+.BR top (1),
+.BR df (1),
+.BR free (1),
+.BR journalctl (1)
+
+.SH NOTES
+This toolkit is designed to be safe and beginner-friendly. Inspection and diagnosis commands are read-only and cannot harm your system. Fix commands always ask for confirmation before making changes.
+
+For more information, visit: https://github.com/your-repo/rs-toolkit
