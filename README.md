@@ -197,6 +197,11 @@ If you find this useful, please star the repository! ⭐
 
 ## 📸 Screenshots
 
+## 📸 Screenshots
+
+![RS-Toolkit Dashboard](docs/images/screenshot.png)
+
+**Sample Output:**
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                    RS-TOOLKIT - SERVER HEALTH DASHBOARD                    ║
@@ -210,6 +215,8 @@ If you find this useful, please star the repository! ⭐
   ✓ CPU: Normal (12%)
   ✓ Services: All running
 ```
+
+**Sample Report:** [View full report](docs/sample-report.txt)
 
 ## 🙏 Acknowledgments
 
