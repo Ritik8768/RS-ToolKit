@@ -4,7 +4,7 @@
 [![Bash](https://img.shields.io/badge/bash-5.0+-orange.svg)](https://www.gnu.org/software/bash/)
 [![Quality](https://img.shields.io/badge/quality-99%25-brightgreen.svg)](https://github.com/Ritik8768/RS-ToolKit)
 
-**Professional Linux System Administration Toolkit** - 20 powerful commands to inspect, diagnose, and fix your Linux servers.
+**Professional Linux System Administration Toolkit**   20 powerful commands to inspect, diagnose, and fix your Linux servers.
 
 Perfect for beginners and professionals alike! 🚀
 
