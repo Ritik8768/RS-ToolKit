@@ -126,7 +126,7 @@ Brief description of changes
 - [ ] Tests added/updated
 ```
 
-## 🐛 Bug Reports
+## 🐛 Bug Report
 
 Use this template:
 
@@ -150,7 +150,7 @@ What should happen
 Any other relevant information
 ```
 
-## 💡 Feature Requests
+## 💡 Feature Request
 
 Use this template:
 
