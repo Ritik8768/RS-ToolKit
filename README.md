@@ -138,7 +138,7 @@ rs-watch 5
 ## 🧪 Testing
 
 Automated testing agent included:
-- 137 comprehensive tests
+- 140 comprehensive tests
 - 10 test suites
 - Automated bug detection
 - Quality score: 99%
@@ -158,7 +158,7 @@ Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 - Linux (Ubuntu, Debian, CentOS, RHEL, etc.)
 - Bash 4.0+
 - Root access (for fix commands)
-- Standard utilities: systemctl, df, free, top, ps
+- Standard utilities: systemctl, df, free, top, ps,
 
 ## 🗺️ Roadmap
 
