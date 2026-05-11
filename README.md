@@ -6,7 +6,7 @@
 
 **Professional Linux System Administration Toolkit**   20 powerful commands to inspect, diagnose, and fix your Linux servers.
 
-Perfect for beginners and professionals alike! 🚀
+Perfect for beginners and professional 🚀
 
 ## ✨ Features
 
@@ -212,4 +212,4 @@ Built with ❤️ for the Linux community
 
 ---
 
-**Made with 🚀 by Ritik**
+**Made with 🚀 by Ritik Selukar**
